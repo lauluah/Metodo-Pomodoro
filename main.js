@@ -1,4 +1,3 @@
-
 const studyClockElement = document.getElementById("clock-study");
 const breakClockElement = document.getElementById("clock-break");
 const longBreakClockElement = document.getElementById("clock-longBreak");
