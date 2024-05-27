@@ -46,11 +46,11 @@ function startStudyClock() {
 }
 
 function startBreakClock() {
+    if(breakTimeDuration === 0) {
+        playAlarm()
+    };
     breakInterval = setInterval(() => {
         breakTimeDuration--;
-        if(breakTimeDuration === 0) {
-            playAlarm()
-        };
         if (breakTimeDuration <= 0) clearInterval(breakInterval);
         updateClocks();
     }, 1000);
