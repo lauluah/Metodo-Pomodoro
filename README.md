@@ -20,4 +20,4 @@ Este projeto é um cronômetro baseado no Método Pomodoro para ajudar a gerenci
 5. Ao final dos 4 ciclos, faça um intervalo longo.
 <br>
 
-[Clique aqui para acessar!](https://lauluah.github.io/Metodo-Pomodoro)
+[Clique aqui para acessar!](https://metodo-pomodoro.onrender.com/)
