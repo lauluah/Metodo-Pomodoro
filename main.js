@@ -35,37 +35,44 @@ function updateClocks() {
 }
 
 function startStudyClock() {
-    if(studyTimeDuration === 0) {
-        playAlarm()
-    };
-    studyInterval = setInterval(() => {
+    if (studyTimeDuration === 0) {
+        playAlarm();
+        return;
+    }
+
+    studyInterval = setTimeout(function() {
         studyTimeDuration--;
-        if (studyTimeDuration <= 0) clearInterval(studyInterval);
         updateClocks();
+        startStudyClock(); 
     }, 1000);
 }
 
 function startBreakClock() {
-    if(breakTimeDuration === 0) {
-        playAlarm()
-    };
-    breakInterval = setInterval(() => {
+    if (breakTimeDuration === 0) {
+        playAlarm();
+        return;
+    }
+
+    breakInterval = setTimeout(function() {
         breakTimeDuration--;
-        if (breakTimeDuration <= 0) clearInterval(breakInterval);
         updateClocks();
+        startBreakClock(); 
     }, 1000);
 }
 
 function startLongBreakClock() {
-    if(longBreakDuration === 0) {
-        playAlarm()
-    };
-    longBreakInterval = setInterval(() => {
+    if (longBreakDuration === 0) {
+        playAlarm();
+        return;
+    }
+
+    longBreakInterval = setTimeout(function() {
         longBreakDuration--;
-        if (longBreakDuration <= 0) clearInterval(longBreakInterval);
         updateClocks();
+        startLongBreakClock(); 
     }, 1000);
 }
+
 
 function playAlarm() {
    alarm = new Audio('/alarm.mp3');
